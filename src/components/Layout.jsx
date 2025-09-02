@@ -3,9 +3,9 @@ import "./Layout.css";
 import icon from "../assets/icon.png";
 import { GoHome } from "react-icons/go";
 import { FaInbox } from "react-icons/fa";
-import invoice from "../assets/invoiceicn.png";
+import invoice from "../assets/invoice.png";
 import logosetting from "../assets/logosetting.png";
-import stat from "../assets/Vector.png";
+import stat from "../assets/stat.png";
 import { CiSettings } from "react-icons/ci";
 import profile from "../assets/profile.png";
 

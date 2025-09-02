@@ -11,18 +11,18 @@ import {
   BarChart,
   Bar,
 } from "recharts";
-import sales from "../assets/Sales.png";
-import revenue from "../assets/Revenue.png";
-import profit from "../assets/Profit.png";
-import salescost from "../assets/salesCost.png";
-import purchase from "../assets/Purchase.png";
-import cost from "../assets/Cost.png";
-import cancel from "../assets/Cancel.png";
-import ret from "../assets/Return.png";
-import quantity from "../assets/Quantity.png";
+import sales from "../assets/sales.png";
+import revenue from "../assets/revenue.png";
+import profit from "../assets/profit.png";
+import salescost from "../assets/salescost.png";
+import purchase from "../assets/purchase.png";
+import cost from "../assets/cost.png";
+import cancel from "../assets/cancel.png";
+import ret from "../assets/ret.png";
+import quantity from "../assets/quantity.png";
 import loc from "../assets/loc.png";
-import sup from "../assets/Suppliers.png";
-import cate from "../assets/Categories.png";
+import sup from "../assets/sup.png";
+import cate from "../assets/cate.png";
 import "./Home.css";
 
 const HomePage = () => {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./LoginPage.css";
-import loginpage from "../assets/login.png";
+import loginpage from "../assets/loginpage.png";
 import icon from "../assets/icon.png";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
@@ -18,13 +18,16 @@ function Signup() {
       return;
     }
     try {
-      const res = await fetch("https://mernback-2-x047.onrender.com/api/v1/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, email, password }),
-      });
+      const res = await fetch(
+        "https://mernback-2-x047.onrender.com/api/v1/signup",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name, email, password }),
+        }
+      );
 
       const data = await res.json();
 

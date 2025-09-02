@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./LoginPage.css";
-import newimg from "../assets/newpassword.png";
+import newimg from "../assets/newimg.png";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";

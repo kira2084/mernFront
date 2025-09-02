@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import searchicn from "../assets/searchicn.png";
 import "./ProductPage.css";
-import uploadimg from "../assets/upload.png";
+import uploadimg from "../assets/uploadimg.png";
 import info from "../assets/info.png";
 const ProductsPage = () => {
   const [products, setProducts] = useState([]);

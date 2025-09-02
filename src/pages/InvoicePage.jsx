@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import "./InvoicePage.css";
 import view from "../assets/view.png";
-import del from "../assets/delete.png";
+import del from "../assets/del.png";
 import searchicn from "../assets/searchicn.png";
 
 const InvoicePage = ({ setInvoiceModalOpen }) => {
