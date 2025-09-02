@@ -11,23 +11,12 @@ import {
   BarChart,
   Bar,
 } from "recharts";
-import sales from "../assets/sales.png";
-import revenue from "../assets/revenue.png";
-import profit from "../assets/profit.png";
-import salescost from "../assets/salescost.png";
-import purchase from "../assets/purchase.png";
-import cost from "../assets/cost.png";
-import cancel from "../assets/cancel.png";
-import ret from "../assets/ret.png";
-import quantity from "../assets/quantity.png";
-import loc from "../assets/loc.png";
-import sup from "../assets/sup.png";
-import cate from "../assets/cate.png";
 import "./Home.css";
 
 const HomePage = () => {
   const [selectedPeriod, setSelectedPeriod] = useState("Weekly");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [products, setProducts] = useState();
   const timePeriods = ["Yearly", "Monthly", "Weekly"];
   const [Top, setTop] = useState([]);
   const [stats, setStats] = useState([]);
@@ -499,7 +488,7 @@ const HomePage = () => {
                 }}
               >
                 <div style={{ fontSize: "20px", marginBottom: "8px" }}>
-                  <img src={sup} alt="" />
+                  <img src="/sup.png" alt="" />
                 </div>
                 <div
                   style={{
@@ -528,7 +517,7 @@ const HomePage = () => {
                 }}
               >
                 <div style={{ fontSize: "20px", marginBottom: "8px" }}>
-                  <img src={cate} alt="" />
+                  <img src="/cate.png" alt="" />
                 </div>
                 <div
                   style={{
@@ -620,10 +609,10 @@ const HomePage = () => {
       .then((res) => res.json())
       .then((data) => {
         const items = [
-          { label: "Sales", value: data.totalSales, icon: sales },
-          { label: "Revenue", value: data.totalRevenue, icon: revenue },
-          { label: "Profit", value: data.totalProfit, icon: profit },
-          { label: "Cost", value: data.totalCost, icon: salescost },
+          { label: "Sales", value: data.totalSales, icon: "/sales.png" },
+          { label: "Revenue", value: data.totalRevenue, icon: "/revenue.png" },
+          { label: "Profit", value: data.totalProfit, icon: "/profit.png" },
+          { label: "Cost", value: data.totalCost, icon: "/salescost.png" },
         ];
         setStats(items);
       })
@@ -643,18 +632,30 @@ const HomePage = () => {
       .then((res) => res.json())
       .then((data) => {
         const items = [
-          { label: "Purchases", value: data.totalPurchases, icon: purchase },
-          { label: "Cost", value: data.totalCost, icon: cost },
-          { label: "Cancelled", value: data.cancelledOrders, icon: cancel },
-          { label: "Returned", value: data.returnedOrders, icon: ret },
+          {
+            label: "Purchases",
+            value: data.totalPurchases,
+            icon: "/purchase.png",
+          },
+          { label: "Cost", value: data.totalCost, icon: "/cost.png" },
+          {
+            label: "Cancelled",
+            value: data.cancelledOrders,
+            icon: "/cancel.png",
+          },
+          { label: "Returned", value: data.returnedOrders, icon: "/ret.png" },
         ];
         const item2 = [
           {
             label: "Quantity in Hand",
             value: data.currentQuantity,
-            icon: quantity,
+            icon: "/quantity.png",
           },
-          { label: "To be Received", value: data.orderQuantity, icon: loc },
+          {
+            label: "To be Received",
+            value: data.orderQuantity,
+            icon: "/loc.png",
+          },
         ];
         setInvent(item2);
         setPurchases(items);

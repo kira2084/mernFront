@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./LoginPage.css";
-import otpimg from "../assets/otpimg.png";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
@@ -70,7 +69,7 @@ function OtpPage() {
       </div>
       <div className="welcome-section">
         <div className="illustration">
-          <img src={otpimg} alt="Dashboard illustration" />
+          <img src="/otpimg.png" alt="Dashboard illustration" />
         </div>
       </div>
     </div>

@@ -1,8 +1,5 @@
-import React, { useState, useEffect, useCallback, useRef } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./InvoicePage.css";
-import view from "../assets/view.png";
-import del from "../assets/del.png";
-import searchicn from "../assets/searchicn.png";
 
 const InvoicePage = ({ setInvoiceModalOpen }) => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -284,7 +281,7 @@ const InvoicePage = ({ setInvoiceModalOpen }) => {
           </h1>
           <div className="search-bar" style={{ backgroundColor: "#4f5062" }}>
             <span className="search-icon">
-              <img src={searchicn} alt="" />
+              <img src="/searchicn.png" alt="" />
             </span>
             <input
               type="text"
@@ -494,7 +491,7 @@ const InvoicePage = ({ setInvoiceModalOpen }) => {
                                 }}
                               >
                                 <img
-                                  src={view}
+                                  src="/view.png"
                                   alt="View"
                                   style={{ paddingRight: "5px" }}
                                 />
@@ -516,7 +513,7 @@ const InvoicePage = ({ setInvoiceModalOpen }) => {
                                 }}
                               >
                                 <img
-                                  src={del}
+                                  src="/del.png"
                                   alt="Delete"
                                   style={{ paddingRight: "5px" }}
                                 />
@@ -536,7 +533,7 @@ const InvoicePage = ({ setInvoiceModalOpen }) => {
                         }}
                       >
                         <img
-                          src={view}
+                          src="/view.png"
                           alt="View"
                           style={{
                             width: "20px",
@@ -548,7 +545,7 @@ const InvoicePage = ({ setInvoiceModalOpen }) => {
                           }
                         />
                         <img
-                          src={del}
+                          src="/del.png"
                           alt="Delete"
                           style={{
                             width: "20px",

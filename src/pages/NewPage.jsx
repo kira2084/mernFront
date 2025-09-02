@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./LoginPage.css";
-import newimg from "../assets/newimg.png";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -119,7 +118,7 @@ function NewPage() {
       </div>
       <div className="welcome-section">
         <div className="illustration">
-          <img src={newimg} alt="Dashboard illustration" />
+          <img src="/newimg.png" alt="Dashboard illustration" />
         </div>
       </div>
     </div>

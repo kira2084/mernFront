@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./LoginPage.css";
-import forget from "../assets/forget.png";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
@@ -71,7 +70,7 @@ function ForgotPage() {
       </div>
       <div className="welcome-section">
         <div className="illustration">
-          <img src={forget} alt="Dashboard illustration" />
+          <img src="/forget.png" alt="Dashboard illustration" />
         </div>
       </div>
     </div>

@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import searchicn from "../assets/searchicn.png";
+
 import "./ProductPage.css";
-import uploadimg from "../assets/uploadimg.png";
-import info from "../assets/info.png";
+
 const ProductsPage = () => {
   const [products, setProducts] = useState([]);
   const [page, setPage] = useState(1);
@@ -384,7 +383,7 @@ const ProductsPage = () => {
             </h1>
             <div className="search-bar" style={{ backgroundColor: "#4f5062" }}>
               <span className="search-icon">
-                <img src={searchicn} alt="" />
+                <img src="/searchicn" alt="" />
               </span>
               <input
                 type="text"
@@ -708,7 +707,7 @@ const ProductsPage = () => {
                           </span>
                         )}
                         <img
-                          src={info}
+                          src="/info.png"
                           alt=""
                           className="mob-img"
                           style={{ width: "18px", height: "18px" }}
@@ -873,7 +872,7 @@ const ProductsPage = () => {
                         color: "#9ca3af",
                       }}
                     ></div>
-                    <img src={uploadimg} alt="" />
+                    <img src="/uploadimg" alt="" />
                     <div
                       style={{
                         fontSize: "14px",

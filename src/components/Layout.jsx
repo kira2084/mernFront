@@ -1,13 +1,8 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import "./Layout.css";
-import icon from "../assets/icon.png";
 import { GoHome } from "react-icons/go";
 import { FaInbox } from "react-icons/fa";
-import invoice from "../assets/invoice.png";
-import logosetting from "../assets/logosetting.png";
-import stat from "../assets/stat.png";
 import { CiSettings } from "react-icons/ci";
-import profile from "../assets/profile.png";
 
 const Layout = () => {
   const location = useLocation();
@@ -17,7 +12,7 @@ const Layout = () => {
     <>
       <div className="app-layout">
         <aside className="sidebar">
-          <img src={icon} alt="" className="logoo" />{" "}
+          <img src="/icon.png" alt="" className="logoo" />{" "}
           <hr className="styled-hrs" />
           <nav>
             <ul>
@@ -33,14 +28,14 @@ const Layout = () => {
               </li>
               <li className={location.pathname === "/invoice" ? "active" : ""}>
                 <Link to="/invoice">
-                  <img src={invoice} alt="" /> Invoice
+                  <img src="/invoice.png" alt="" /> Invoice
                 </Link>
               </li>
               <li
                 className={location.pathname === "/statistics" ? "active" : ""}
               >
                 <Link to="/statistics">
-                  <img src={stat} alt="" /> Statistics
+                  <img src="/stat.png" alt="" /> Statistics
                 </Link>
               </li>
               <li className={location.pathname === "/settings" ? "active" : ""}>
@@ -52,7 +47,7 @@ const Layout = () => {
           </nav>
           <hr className="styled-hr" />
           <div className="profile-section">
-            <img src={profile} alt="Profile" className="profile-img" />
+            <img src="/profile.png" alt="Profile" className="profile-img" />
             <span>{username.name}</span>
           </div>
         </aside>
@@ -62,14 +57,14 @@ const Layout = () => {
         <main className="main-content">
           <div className="mobile-icon">
             <div className="icn">
-              <img src={icon} alt="" className="icn" />
+              <img src="/icon.png" alt="" className="icn" />
             </div>
             <div className="setting">
               <Link
                 to="/settings"
                 className={location.pathname === "/settings" ? "active" : ""}
               >
-                <img src={logosetting} alt="" />
+                <img src="/logosetting.png" alt="" />
               </Link>
             </div>
           </div>
@@ -91,13 +86,13 @@ const Layout = () => {
             to="/invoice"
             className={location.pathname === "/invoice" ? "active" : ""}
           >
-            <img src={invoice} alt="" />
+            <img src="/invoice.png" alt="" />
           </Link>
           <Link
             to="/statistics"
             className={location.pathname === "/statistics" ? "active" : ""}
           >
-            <img src={stat} alt="" />
+            <img src="/stat.png" alt="" />
           </Link>
         </nav>
       </div>

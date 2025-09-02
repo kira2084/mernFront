@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "./LoginPage.css";
-import loginpage from "../assets/loginpage.png";
-import icon from "../assets/icon.png";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
@@ -100,11 +98,11 @@ function LoginPage() {
           <h1>
             Welcome to <br /> Company Name
           </h1>
-          <img className="brand-icon" src={icon} alt="Brand icon" />
+          <img className="brand-icon" src="/icon.png" alt="Brand icon" />
         </div>
 
         <div className="illustration">
-          <img src={loginpage} alt="Dashboard illustration" />
+          <img src="/loginpage.png" alt="Dashboard illustration" />
         </div>
       </div>
     </div>
