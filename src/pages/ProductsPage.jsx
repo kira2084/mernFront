@@ -698,7 +698,7 @@ const ProductsPage = () => {
                           <span style={{ color: "red", fontWeight: "600" }}>
                             Out of stock
                           </span>
-                        ) : p.quantity <= p.threshold && p.expiryDate > now ? (
+                        ) : p.quantity < p.threshold ? (
                           <span style={{ color: "#e49b43", fontWeight: "600" }}>
                             Low stock
                           </span>
