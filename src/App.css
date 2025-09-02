@@ -1,0 +1,20 @@
+.mobile-icon {
+  display: none;
+}
+
+.icn,
+.setting {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .icn,
+  .setting {
+    display: flex;
+  }
+}

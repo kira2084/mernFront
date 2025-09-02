@@ -1,0 +1,167 @@
+
+.app-layout {
+  display: flex;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+
+.sidebar {
+  width: 220px;
+  background: #242531;
+  color: #fff;
+  padding: 20px 10px;
+}
+
+.logoo {
+  width: 30px;
+  height: 30px;
+  margin-left: 11px;
+  margin-bottom: 22px;
+}
+.styled-hrs {
+  border: none;
+  border-top: 3px solid #424457;
+  width: 100%;
+}
+
+.styled-hr {
+  border: none;
+  border-top: 3px solid #424457;
+  width: 13%;
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 15px 0;
+}
+
+.sidebar li a {
+  color: #ccc;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.sidebar li.active a,
+.sidebar li a:hover {
+  background: #40445a;
+  color: #fff;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.profile-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+}
+
+.main-content {
+  flex: 1;
+  background: #424451;
+  overflow-y: auto;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #242531;
+  border-radius: 40px;
+  padding: 10px 25px;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  z-index: 4000;
+  display: none; 
+  width: 380px;
+  height: 76px;
+}
+
+.bottom-nav a {
+  color: #ccc;
+  font-size: 20px;
+  display: flex;
+}
+
+.bottom-nav a.active {
+  color: #fff;
+}
+
+.mobile-icon {
+  display: none;
+  justify-content: space-evenly;
+  align-items: center;
+   width: 100%;   
+  height: 60px;
+  padding-bottom: 40px;
+}
+.icn {
+  width: 47px;
+  height: 47px;
+  object-fit: contain;
+}
+.icn,.setting{
+  display: none;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none; /
+  }
+
+  .bottom-nav {
+    display: flex;
+    justify-content: space-evenly;
+    
+  }
+ .mobile-icon {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+   width: 100%;   
+  height: 60px;
+  padding-bottom: 40px;
+}
+.icn {
+  width: 47px;
+  height: 47px;
+  object-fit: contain;
+}
+.icn,.setting{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+  .main-content {
+    padding-bottom: 80px;
+  }
+}
