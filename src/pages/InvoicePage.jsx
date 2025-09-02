@@ -13,7 +13,7 @@ const InvoicePage = ({ setInvoiceModalOpen }) => {
   const [invoices, setInvoices] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState();
-
+  const [getinvs, setInv] = useState(null);
   const [search, setSearch] = useState("");
   const limit = 5;
   const token = localStorage.getItem("token");
@@ -484,41 +484,46 @@ const InvoicePage = ({ setInvoiceModalOpen }) => {
                           >
                             ⋮
                           </button>
-                          {activeDropdown === (invoice.id || invoice._id) &&
-                            invoice.status === "Paid" && (
-                              <div className="dropdown-menu">
-                                <button
-                                  className="dropdown-item view-btn"
-                                  onClick={() =>
-                                    handleViewInvoice(invoice.id || invoice._id)
-                                  }
-                                >
-                                  <img
-                                    src={view}
-                                    alt="View"
-                                    style={{ paddingRight: "5px" }}
-                                  />
-                                  View Invoice
-                                </button>
-                                <button
-                                  className="dropdown-item delete-btn"
-                                  onClick={() => {
-                                    setSelectedInvoiceId(
-                                      invoice.id || invoice._id
-                                    );
-                                    setShowDeleteModal(true);
-                                    setActiveDropdown(null);
-                                  }}
-                                >
-                                  <img
-                                    src={del}
-                                    alt="Delete"
-                                    style={{ paddingRight: "5px" }}
-                                  />
-                                  Delete
-                                </button>
-                              </div>
-                            )}
+                          {activeDropdown === (invoice.id || invoice._id) && (
+                            <div className="dropdown-menu">
+                              <button
+                                className="dropdown-item view-btn"
+                                onClick={() => {
+                                  handleViewInvoice(invoice.id || invoice._id);
+                                  setInv(invoice);
+                                }}
+                              >
+                                <img
+                                  src={view}
+                                  alt="View"
+                                  style={{ paddingRight: "5px" }}
+                                />
+                                View Invoice
+                              </button>
+                              <button
+                                className="dropdown-item delete-btn"
+                                disabled={
+                                  invoice.status.toLowerCase() === "unpaid"
+                                    ? true
+                                    : false
+                                }
+                                onClick={() => {
+                                  setSelectedInvoiceId(
+                                    invoice.id || invoice._id
+                                  );
+                                  setShowDeleteModal(true);
+                                  setActiveDropdown(null);
+                                }}
+                              >
+                                <img
+                                  src={del}
+                                  alt="Delete"
+                                  style={{ paddingRight: "5px" }}
+                                />
+                                Delete
+                              </button>
+                            </div>
+                          )}
                         </div>
                       </div>
                     </td>
@@ -655,7 +660,7 @@ const InvoicePage = ({ setInvoiceModalOpen }) => {
               <div class="invoice-details">
                 <div class="detail-group">
                   <h4>Invoice #</h4>
-                  <p>INV-1007</p>
+                  <p>{getinvs.invoiceId}</p>
                 </div>
                 <div class="detail-group">
                   <h4>Products</h4>
@@ -674,11 +679,11 @@ const InvoicePage = ({ setInvoiceModalOpen }) => {
               <div class="invoice-details">
                 <div class="detail-group">
                   <h4>Reference</h4>
-                  <p>INV-007</p>
+                  <p>{getinvs.referenceNumber}</p>
                 </div>
                 <div class="detail-group">
                   <h4>Due date</h4>
-                  <p>10-Apr-2024</p>
+                  <p>{getinvs.dueDate}</p>
                 </div>
               </div>
               <table class="items-table">
